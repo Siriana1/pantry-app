@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@color/background"
+        >
+
+        <!--Home button-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="@color/background">
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:src="@drawable/carrot_home_button_medium2"
+                android:text="PANTRY CONTROL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Pantry and shopping list buttons-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
+            <Button
+                android:id="@+id/pantryl"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/btn_background"
+                android:onClick="pantry"
+                android:text="PANTRY"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btnShoppingList"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnShoppingList"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@color/btn_background"
+                android:text="SHOPPING LIST"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/pantryl" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Separating line 1-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/separating_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0001"
+            android:background="@color/background"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="___________________________"
+                android:textColor="#778899"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Barcode reader-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout3"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@color/background">
+
+            <TextView
+                android:id="@+id/barcode_reader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="104dp"
+                android:text="BARCODE READER"
+                android:textColor="@color/royal_blue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Add and remove buttons-->
+        <!--Throw out button-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout4"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/background"
+            app:layout_constraintEnd_toStartOf="@+id/btnRemoveByScanner"
+            app:layout_constraintStart_toStartOf="@+id/btnRemoveByScanner">
+
+            <Button
+                android:id="@+id/btnAddByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/btn_background"
+                android:onClick="addItemByBarcode"
+                android:text="ADD"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btnRemoveByScanner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnRemoveByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/btn_background"
+                android:text="REMOVE"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnAddByScanner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnAddByScanner" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout6"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
+            <Button
+                android:id="@+id/btnThrowOutByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:paddingHorizontal="30dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/btn_background"
+                android:text="THROW OUT"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--Separating line 2-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/separating_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="___________________________"
+                android:textColor="#778899"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+        <!--Help button-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout5"
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="2dp"
+            android:background="@color/background">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/help"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/btn_background"
+            android:onClick="help"
+            android:text="HELP"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/btn_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+</ScrollView>

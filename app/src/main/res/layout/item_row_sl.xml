@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llShoppingList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_margin="8dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvNameSl"
+        android:layout_width="160sp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:padding="10dp"
+        android:text="@string/name"
+        android:textSize="17sp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivEditSl"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="10dp"
+        android:src="@drawable/ic_action_edit"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvQuantitySl"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="10dp"
+        android:text="@string/quantity"
+        android:textSize="17sp"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivIncrementSl"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/increment"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivDeleteSl"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/eaten"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivBuy1Sl"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/buy"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+</LinearLayout>

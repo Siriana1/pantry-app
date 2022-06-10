@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pantry</string>
+    <string name="pantry_control">Pantry control</string>
+    <string name="choose_a_category_for_your_item">Choose a category for your Shopping List item</string>
+    <string name="baking">Baking</string>
+    <string name="fruit_veg">Fruit &amp; Veg</string>
+    <string name="breads_pastries">Breads and Pastries</string>
+    <string name="grains_pulses">Grains and Pulses</string>
+    <string name="condiments">Condiments</string>
+    <string name="meat_fish">Meat and Fish</string>
+    <string name="desserts_sweets">Desserts and Sweets</string>
+    <string name="ready_meals">Ready meals</string>
+    <string name="drinks">Drinks</string>
+    <string name="sauces">Sauces</string>
+    <string name="pick_a_category_for_your_item">Pick a category for your item</string>
+    <string name="desserts_and_sweets">Desserts and Sweets</string>
+    <string name="name">Name</string>
+    <string name="quantity">Qty</string>
+</resources>

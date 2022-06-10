@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Help">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@color/btn_text"
+        android:textStyle="bold"
+        android:text="The Pantry Control app help page"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn_text"
+        android:text="Accessing your pantry and shopping list"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/btn_text"
+        android:text="To access the pantry or the shopping list where you can add, view and update your items, simply select the Pantry button or the Shopping List button. Your pantry represents your kitchen and the items you have stored there in your cupboards, fridge and freezer.  Your shopping list contains items you have used up and items that you have manually added to the list."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/btn_text"
+        android:text="Accessing and updating your pantry categories"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="To access a category, simply select it. To add a new item, click the plus button and enter a description of the food item you wish to store, along with its quantity.  You may also optionally enter its barcode.  Then click the 'Add item button' to confirm.  The item will remain in your pantry even if the quantity is set to 0, so you wont have to add it again."
+        android:textColor="@color/btn_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/btn_text"
+        android:text="To update an item, click the little pencil, update the details of your item accordingly and click update."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/btn_text"
+        android:text="To delete an item completely from the pantry, click the little bin icon and confirm that you want to delete it."/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/btn_text"
+        android:textStyle="bold"
+        android:text="Using the barcode reader"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/btn_text"
+        android:text="BARCODE READER COMING SOON!! To open the barcode reader, select the appropriate button under the heading 'Barcode reader'.  If you want to add an item to the Pantry, choose Add, if you have eaten an item and you want to buy again, choose Remove and if you have thrown an item out or eaten it but do not wish to buy again, choose Throw out.  Once the barcode reader is open, use it to scan the barcode of your item. If the barcode exists in your pantry, it will be automatically updated, otherwise, it will request you to enter the details of the new item."/>
+
+</LinearLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background"
+    tools:context=".Pantry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <!-- Home button -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/home"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:text="Pantry control"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:onClick="home">
+            </Button>
+
+        </LinearLayout>
+
+        <!-- Pick a category to add new item to message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <TextView
+                android:id="@+id/tvPickCat"
+                style="?android:dialogMessage"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="90dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Choose a category for your item"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:background="@color/btn_background"
+                android:visibility="gone"
+                tools:visibility="visible">
+            </TextView>
+
+        </LinearLayout>
+
+        <!-- Baking and fruit&veg buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/baking"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="Baking"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="openBaking"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/fruit_veg"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="Fruit &amp; veg"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:layout_marginTop="12dp"
+                android:background="@color/btn_background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+
+        </LinearLayout>
+        <!-- Breads/pastries and grains/pulses buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/bread_pastries"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@color/btn_background"
+                android:onClick="openBread"
+                android:text="Bread/pastry"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"></Button>
+
+            <Button
+                android:id="@+id/grains_pulses"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="grains/pulses"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+
+        </LinearLayout>
+        <!-- Condiments and meat/fish buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/condiments"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="condiments"
+                android:textSize="18sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginEnd="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/meat_fish"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="meat/fish"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+
+        </LinearLayout>
+        <!-- Desserts/sweets and ready meals buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/desserts_sweets"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="desserts"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginEnd="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/ready_meals"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="ready meals"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+
+        </LinearLayout>
+        <!-- Drinks and sauces buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/drinks"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="drinks"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginEnd="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/sauces"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="sauces"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+        </LinearLayout>
+
+            <!-- New cat1 and add new category buttons -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <Button
+                android:id="@+id/newCategory_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:background="@color/btn_background"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                android:text=""
+                android:layout_marginEnd="10dp"
+                >
+            </Button>
+
+            <Button
+                android:id="@+id/addCategory_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@color/background"
+                android:text="+"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"></Button>
+
+        </LinearLayout>
+        <!-- New category button and add new category button
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/newCategory_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/btn_background"
+                android:text="New cat"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:visibility="invisible"
+                tools:visibility="visible"
+                ></Button>
+
+            <Button
+                android:id="@+id/addCategory_btn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="       +"
+                android:textSize="40sp"
+                android:textColor="@color/btn_text"
+                android:backgroundTint="@color/background"
+                android:layout_marginStart="10dp"
+                >
+            </Button>
+            -->
+
+        </LinearLayout>
+</ScrollView>

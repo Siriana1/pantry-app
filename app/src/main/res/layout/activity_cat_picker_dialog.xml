@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background"
+    tools:context=".CatPickerDialog">
+
+    <LinearLayout
+        android:id="@+id/cat_picker_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".CatPickerDialog">
+
+        <!-- Home button -->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/homeFromBaking"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="70dp"
+                android:text="@string/pantry_control"
+                android:textSize="22sp"
+                android:textColor="@color/btn_text"
+                android:backgroundTint="@color/btn_background"
+                >
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="@string/pick_a_category_for_your_item"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBaking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/baking"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/breads_pastries"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCondiments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/condiments"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDessertsSweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/desserts_and_sweets"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDrinks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/drinks"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFruitVeg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/fruit_veg"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvGrainsPulses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/grains_pulses"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMeatFish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/meat_fish"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvReadyMeals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/ready_meals"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSauces"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/sauces"
+                android:textColor="@color/btn_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:background="@color/background"
+        >
+        <!--Home button-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/pantryControll"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="64sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="64sp"
+                android:layout_weight="1"
+                android:text="PANTRY CONTROL"
+                android:src="@drawable/carrot_home_button_medium1"
+                android:background="@color/btn_background"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--Pantry and shopping list buttons-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            >
+            <Button
+                android:id="@+id/pantryl"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="24sp"
+                android:layout_marginLeft="24sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:background="@color/btn_background"
+                android:text="PANTRY"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:onClick="pantry"/>
+
+            <Button
+                android:id="@+id/btnShoppingList"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="1sp"
+                android:layout_marginEnd="24sp"
+                android:layout_marginRight="24sp"
+                android:layout_weight="1"
+                android:background="@color/btn_background"
+                android:text="SHOPPING LIST"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            >
+        </LinearLayout>
+        <!--Separating line 1-->
+        <LinearLayout
+            android:id="@+id/separating_line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="___________________________"
+                android:textColor="#778899"
+                android:textSize="20dp"
+                >
+            </TextView>
+        </LinearLayout>
+        <!--Barcode reader-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            >
+            <TextView
+                android:id="@+id/barcode_reader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BARCODE READER"
+                android:textColor="@color/royal_blue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="90dp"
+                android:layout_marginStart="89dp">
+            </TextView>
+        </LinearLayout>
+        <!--Add and remove buttons-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            >
+
+            <Button
+                android:id="@+id/btnAddByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="15sp"
+                android:layout_height="60sp"
+                android:layout_marginStart="24sp"
+                android:layout_marginLeft="24sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="0.9"
+                android:background="@color/btn_background"
+                android:text="ADD"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:onClick="addItemByBarcode"/>
+
+            <Button
+                android:id="@+id/btnRemoveByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="15sp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="14sp"
+                android:layout_marginEnd="24sp"
+                android:layout_marginRight="24sp"
+                android:layout_weight="1"
+                android:background="@color/btn_background"
+                android:text="REMOVE"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            >
+        </LinearLayout>
+        <!--Throw out button-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            >
+
+            <Button
+                android:id="@+id/btnThrowOutByScanner"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="15sp"
+                android:layout_height="60dp"
+                android:layout_marginStart="85sp"
+                android:layout_marginLeft="60sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="85sp"
+                android:layout_marginRight="60sp"
+                android:layout_weight="0.9"
+                android:background="@color/btn_background"
+                android:text="THROW OUT"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--Separating line 2-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/separating_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="___________________________"
+                android:textColor="#778899"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+        </LinearLayout>
+        <!--Help button-->
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:orientation="horizontal"
+            android:background="@color/background"
+            android:layout_gravity="right"
+            >
+
+            <Button
+                android:id="@+id/help"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="2sp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/btn_background"
+                android:onClick="help"
+                android:text="HELP"
+                android:textColor="@color/btn_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
