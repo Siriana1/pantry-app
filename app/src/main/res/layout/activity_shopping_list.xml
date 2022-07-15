@@ -109,20 +109,19 @@
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="114dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/homeFromShopping"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
                 android:text="Pantry control"
-                android:textSize="22sp"
+                android:src="@drawable/carrot_home_button_medium2"
                 android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
                 >
-            </Button>
+            </ImageButton>
 
         </LinearLayout>
 
@@ -142,9 +141,9 @@
                 android:layout_weight="0.1"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="SHOPPING LIST"
+                android:text="S H O P P I N G  L I S T"
                 android:textColor="@color/btn_text"
-                android:textSize="24sp"
+                android:textSize="27sp"
                 android:textStyle="bold" />
 
         </LinearLayout>

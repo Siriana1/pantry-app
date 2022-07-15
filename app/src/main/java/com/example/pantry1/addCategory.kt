@@ -31,8 +31,8 @@ class addCategory : AppCompatActivity() {
             finish()
         }
         //for when the home button is clicked - part 2/3
-        val home_btn = findViewById<Button>(R.id.home_btn)
-        home_btn.setOnClickListener {
+        //val home_btn = findViewById<Button>(R.id.home_btn)
+        img_btn_home.setOnClickListener {
             Toast.makeText(this, "Category was not added", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

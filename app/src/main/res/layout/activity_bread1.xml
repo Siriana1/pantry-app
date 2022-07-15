@@ -21,20 +21,18 @@
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="114dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/homeFromBread"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="70dp"
+                android:layout_height="wrap_content"
                 android:text="Pantry control"
-                android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                >
-            </Button>
+                android:src="@drawable/carrot_home_button_medium2"
+                android:textColor="@color/btn_text">
+            </ImageButton>
 
         </LinearLayout>
 
@@ -151,12 +149,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textSize="24sp"
+                android:textSize="27sp"
                 android:textColor="@color/btn_text"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:layout_weight="0.1"
-                android:text="BREADS AND PASTRIES"
+                android:text="BREADS &amp; PASTRIES"
                 />
             <!-- Edit button for category name  -->
             <ImageButton

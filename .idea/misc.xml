@@ -13,6 +13,7 @@
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable-anydpi/eaten.xml" value="0.127" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable-anydpi/increment.xml" value="0.1485" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2064814814814815" />
+        <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/btn_rounded_edges.xml" value="0.1255" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/home_button1.xml" value="0.1" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/home_icon.xml" value="0.24375" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/ic_action_delete.xml" value="0.1" />
@@ -20,6 +21,7 @@
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/ic_launcher_pantry1_foreground.xml" value="0.24375" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/ic_launcher_pantry_foreground.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/oval_button.xml" value="0.1285" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/drawable/small.xml" value="0.264" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/activity_add_by_barcode.xml" value="0.25" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/activity_add_category.xml" value="0.264" />
@@ -35,7 +37,7 @@
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/activity_shopping_list.xml" value="0.2234375" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_barcode_dialog.xml" value="0.264" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_item.xml" value="0.264" />
-        <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_item_bc_dialog.xml" value="0.2234375" />
+        <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_item_bc_dialog.xml" value="0.1" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_item_dialog.xml" value="0.2234375" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/add_item_manually_layout.xml" value="0.20625" />
         <entry key="..\:/Users/diane/AndroidStudioProjects/vc_project1/pantry1/app/src/main/res/layout/baking.xml" value="0.2234375" />

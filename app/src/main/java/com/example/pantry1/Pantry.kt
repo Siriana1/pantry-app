@@ -74,7 +74,7 @@ class Pantry : AppCompatActivity() {
     //----------------END OF ONCREATE---------------------------------------------------------------------------------
 
     //Checks if the scanned barcode exists in the db and updates it accordingly if so.  If not found sends it to the
-    //appropriate category to be added
+    //appropriate category to be added.
     fun checkBarcode(){
         var cat = 1
         var existingBarcode = false
@@ -189,9 +189,9 @@ class Pantry : AppCompatActivity() {
     private fun updateCategoryName() {
         if(from1 == "new_category_name"){
             newCatName = intent.getStringExtra("NEW_CAT_NAME").toString()
-            bread_pastries.text = newCatName
+            btnBread.text = newCatName
         }else if(newCatName != "default"){
-            bread_pastries.text = newCatName
+            btnBread.text = newCatName
         }
     }
 

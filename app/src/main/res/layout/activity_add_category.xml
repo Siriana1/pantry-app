@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -8,37 +9,31 @@
     android:background="@color/background"
     >
     <!--Home button-->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_weight="0.00005"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/home_btn"
+        android:layout_height="114dp"
+        android:background="@color/background">
+
+        <ImageButton
+            android:id="@+id/img_btn_home"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="23sp"
-            android:layout_height="90sp"
-            android:layout_marginStart="64sp"
-            android:layout_marginTop="15sp"
-            android:layout_marginEnd="64sp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:src="@drawable/carrot_home_button_medium2"
             android:text="PANTRY CONTROL"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/btn_text"
-            android:backgroundTint="@color/btn_background"
-            android:onClick="home"
-            />
-    </LinearLayout>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <!--Create new pantry category TextViews-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_weight="0.00001"
+        android:layout_marginTop="35dp"
         android:orientation="horizontal"
         android:background="@color/background"
         android:gravity="center"
@@ -48,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" CREATE NEW"
-            android:textColor="@color/royal_blue"
+            android:textColor="@color/btn_text"
             android:textSize="24sp"
             android:textStyle="bold"           >
         </TextView>
@@ -56,8 +51,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_weight="0.00001"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:background="@color/background"
         android:layout_marginBottom="30dp"
@@ -68,11 +62,40 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PANTRY CATEGORY"
-            android:textColor="@color/royal_blue"
+            android:textColor="@color/btn_text"
             android:textSize="24sp"
             android:textStyle="bold"
             >
         </TextView>
+    </LinearLayout>
+
+    <!--Enter name of new category EditText-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enter_new_category_name"
+        android:theme="@style/Theme.textInputBox"
+        app:endIconMode="clear_text"
+        android:layout_width="360dp"
+        android:hint="Enter name of new category"
+        android:background="@color/colorLightGray"
+        android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_new_category_name_et"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:minHeight="80dp" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <!--Submit button-->
@@ -91,44 +114,18 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="62dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="90dp"
             android:layout_marginLeft="90dp"
             android:layout_marginEnd="90dp"
             android:layout_marginRight="90dp"
             android:layout_weight="0.9"
-            android:backgroundTint="@color/btn_background"
             android:text="submit"
+            android:background="@drawable/oval_button"
             android:textColor="@color/btn_text"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!--Enter name of new category EditText-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:layout_weight="0.0001"
-        android:orientation="horizontal"
-        android:background="@color/background">
-
-        <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/enter_new_category_name"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/enter_new_category_name_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="80dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:hint="Enter name of new category" />
-    </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
 
 </LinearLayout>

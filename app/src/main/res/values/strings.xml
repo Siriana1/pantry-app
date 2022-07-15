@@ -16,4 +16,5 @@
     <string name="desserts_and_sweets">Desserts and Sweets</string>
     <string name="name">Name</string>
     <string name="quantity">Qty</string>
+    <string name="help">\?</string>
 </resources>

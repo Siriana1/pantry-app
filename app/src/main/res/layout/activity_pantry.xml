@@ -18,20 +18,16 @@
         <LinearLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="114dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/home"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="70dp"
-                android:text="Pantry control"
-                android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:onClick="home">
-            </Button>
+                android:layout_height="wrap_content"
+                android:src="@drawable/carrot_home_button_medium2"
+                android:textColor="@color/btn_text"/>
 
         </LinearLayout>
 
@@ -60,187 +56,228 @@
         </LinearLayout>
 
         <!-- Baking and fruit&veg buttons -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
 
             <Button
                 android:id="@+id/baking"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/oval_button"
                 android:text="Baking"
+                android:textColor="#2E8B57"
                 android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="10dp"
+                android:textAllCaps="false"
                 android:onClick="openBaking"
-                >
-            </Button>
+                app:layout_constraintEnd_toStartOf="@+id/btnFruitVeg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/fruit_veg"
+                android:id="@+id/btnFruitVeg"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="Fruit &amp; veg"
-                android:textSize="22sp"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/oval_button"
+                android:text="Fruit &amp; Veg"
+                android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:layout_marginTop="12dp"
-                android:background="@color/btn_background"
-                android:layout_marginStart="10dp"
-                >
-            </Button>
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/baking" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-        <!-- Breads/pastries and grains/pulses buttons -->
-        <LinearLayout
+        <!-- Bread and grains buttons -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
 
             <Button
-                android:id="@+id/bread_pastries"
+                android:id="@+id/btnBread"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="10dp"
-                android:layout_weight="1"
-                android:background="@color/btn_background"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/oval_button"
+                android:text="Bread/Pastries"
+                android:textColor="#2E8B57"
+                android:textSize="22sp"
+                android:textAllCaps="false"
                 android:onClick="openBread"
-                android:text="Bread/pastry"
-                android:textColor="@color/btn_text"
-                android:textSize="22sp"></Button>
+                app:layout_constraintEnd_toStartOf="@+id/btnGrainsPulses"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/grains_pulses"
+                android:id="@+id/btnGrainsPulses"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="grains/pulses"
-                android:textSize="22sp"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/oval_button"
+                android:text="Grains/Pulses"
+                android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginStart="10dp"
-                >
-            </Button>
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnBread" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
         <!-- Condiments and meat/fish buttons -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
 
             <Button
-                android:id="@+id/condiments"
+                android:id="@+id/btnCondiments"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="condiments"
-                android:textSize="18sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginEnd="10dp"
-                >
-            </Button>
-
-            <Button
-                android:id="@+id/meat_fish"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="meat/fish"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/oval_button"
+                android:text="Condiments"
+                android:textColor="#2E8B57"
                 android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginStart="10dp"
-                >
-            </Button>
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@+id/btnMeatFish"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
-        <!-- Desserts/sweets and ready meals buttons -->
-        <LinearLayout
+            <Button
+                android:id="@+id/btnMeatFish"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/oval_button"
+                android:text="Meat/Fish"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_text"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnCondiments" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Desserts and ready meals buttons -->
+        <androidx.constraintlayout.widget.ConstraintLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
 
             <Button
-                android:id="@+id/desserts_sweets"
+                android:id="@+id/btnDesserts"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="desserts"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/oval_button"
+                android:text="Desserts"
+                android:textColor="#2E8B57"
                 android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginEnd="10dp"
-                >
-            </Button>
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@+id/btnReadyMeals"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/ready_meals"
+                android:id="@+id/btnReadyMeals"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="ready meals"
-                android:textSize="22sp"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/oval_button"
+                android:text="Grains/Pulses"
+                android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginStart="10dp"
-                >
-            </Button>
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnDesserts" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
         <!-- Drinks and sauces buttons -->
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp">
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.0001"
+            android:background="@color/background">
+
 
             <Button
-                android:id="@+id/drinks"
+                android:id="@+id/btnDrinks"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="drinks"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/oval_button"
+                android:text="Drinks"
+                android:textColor="#2E8B57"
                 android:textSize="22sp"
-                android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginEnd="10dp"
-                >
-            </Button>
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@+id/btnSauces"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/sauces"
+                android:id="@+id/btnSauces"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="sauces"
-                android:textSize="22sp"
+                android:layout_width="0dp"
+                android:layout_height="74dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/oval_button"
+                android:text="Sauces"
+                android:textAllCaps="false"
                 android:textColor="@color/btn_text"
-                android:background="@color/btn_background"
-                android:layout_marginStart="10dp"
-                >
-            </Button>
-        </LinearLayout>
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnDrinks" />
+            >
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             <!-- New cat1 and add new category buttons -->
         <LinearLayout
