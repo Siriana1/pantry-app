@@ -1,39 +1,4 @@
 package com.example.pantry1;
-/*
-1. BARCODE SCANNER - how to on youtube https://www.youtube.com/watch?v=iMFFdQykL0o  note this is a Java tutorial
-
-//put this dependency in: gradle scripts > build gradle(module:app) - slot in after the appcompat one, then click sync now (top right)
-//why? to import the necessary classes
-dependencies {
-    implementation 'com.budiyev.android:code-scanner:2.1.0'
-}
-//create a layout file
-//Why? to determine how the screen will look when its about to scan something
-res > layout > file > new > layout resource file > name it main_activity or whatever you want
-
-//retrieve the code called 'define a view in your layout file' from https://github.com/yuriy-budiyev/code-scanner and paste it
-//into the new layout file, overwriting what is there and run, you can then amend the layout and colour,
-//if get an error change the minSdkversion in gradle scripts > build.gradle > module:app
-
-//Create a new Java class
-Java > rc com.example.appname > name it mainActivity or similar
-
-//Import
-in mainActivity, import androidx.appcompat.app.AppCompatActivity;
-
-//Extend
-public class MainActivites extends AppCompatActivity {
-}
-
-//Paste the Java code section from https://github.com/yuriy-budiyev/code-scanner inside the {} and import the missing classes
-//all of it except '{public class MainActivity extends AppCompatActivity'
-
-//Clean the new code - check the layout name matches the layout file you created: setContentView(R.layout.main_activity);
-//add your Java file name:  public void onDecoded(@NonNull final Result result) {
-//                MainActivites.this.runOnUiThre
-// change the start of toast to:  Toast.makeText(MainActivities.this
-
-//Check camera permissions by adding an if statement in onCreate
 
 CodeScannerView scannerView = findViewById(R.id.scanner_view);
         if (Build.VERSION.SDK_INT >= 23) {
@@ -216,12 +181,7 @@ public class BarcodeReader extends AppCompatActivity {
 
 /*
 
-BARCODE SCANNER - HOW TO
 
-BARCODE SCANNER - how to on youtube https://www.youtube.com/watch?v=iMFFdQykL0o  note this is a Java tutorial
-
-//put this dependency in: gradle scripts > build gradle(module:app) - slot in after the appcompat one, then click sync now (top right)
-//why? to import the necessary classes
 dependencies {
     implementation 'com.budiyev.android:code-scanner:2.1.0'
 }
