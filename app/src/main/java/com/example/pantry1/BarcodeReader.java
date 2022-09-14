@@ -149,8 +149,8 @@ public class BarcodeReader extends AppCompatActivity {
             }
         });
 
-    }  //this curly was added when the new method was created, the method body is code already here
-    //end of added
+    }  
+    
     @Override
     protected void onResume() {
         super.onResume();
@@ -164,9 +164,7 @@ public class BarcodeReader extends AppCompatActivity {
     protected void onPause() {
         //added
         if(mCodeScanner != null)
-            //end of added - remember to indent the line after this if statement
-            mCodeScanner.releaseResources();
-        super.onPause();
+           super.onPause();
     }
 
     //@Override
